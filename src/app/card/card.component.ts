@@ -17,11 +17,11 @@ export class CardComponent {
   constructor(private store$: Store<CardState>, private router: Router) {
   }
 
-  onLike(id) {
+  onLike(id): void {
     this.store$.dispatch(new CardLikeAction({_id: id}));
   }
 
-  onInfo() {
+  onInfo(): void {
     this.router.navigate(['/info'], {
       queryParams: {
         idx: this.index,

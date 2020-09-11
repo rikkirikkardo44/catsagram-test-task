@@ -46,12 +46,10 @@ export class CardInfoComponent implements OnInit {
     });
   }
 
-  onBack() {
+  onBack(): void {
     this.router.navigate(['/']);
   }
 }
-
-
 
 export interface DeleteDialogData {
   id: string

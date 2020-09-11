@@ -19,7 +19,7 @@ export class CreateCardFormComponent {
 
   constructor(private store$: Store<CardState>, private router: Router) {
   }
-  onSubmit() {
+  onSubmit(): void {
     this.store$.dispatch(new CardCreateAction({
       name: this.validator.name.value,
       description: this.validator.description.value,

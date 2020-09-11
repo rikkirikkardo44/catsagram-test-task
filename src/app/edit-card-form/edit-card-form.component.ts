@@ -44,7 +44,7 @@ export class EditCardFormComponent implements OnInit {
     })
   }
 
-  onSubmit() {
+  onSubmit(): void {
     this.store$.dispatch(new CardEditAction({
       name: this.validator.name.value,
       description: this.validator.description.value,

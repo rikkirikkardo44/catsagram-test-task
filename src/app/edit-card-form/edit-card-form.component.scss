@@ -1,0 +1,28 @@
+.edit-form {
+  display: flex;
+  justify-content: center;
+  padding: 25px 50px;
+
+  .container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 35px 50px 50px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+    .title {
+      font-size: 25px;
+      align-self: center;
+      margin-bottom: 25px;
+    }
+    .button-row {
+      display: table-cell;
+      align-self: center;
+
+      button {
+        margin: 0 5px;
+      }
+    }
+  }
+}

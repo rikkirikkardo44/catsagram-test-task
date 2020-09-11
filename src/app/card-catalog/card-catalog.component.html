@@ -1,0 +1,7 @@
+<div class="card-catalog">
+  <div class="container">
+    <app-card *ngFor="let card of cardList$ | async, let idx = index"
+              [card]="card"
+              [index]="idx"></app-card>
+  </div>
+</div>

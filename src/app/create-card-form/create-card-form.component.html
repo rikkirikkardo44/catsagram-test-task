@@ -1,0 +1,22 @@
+<div class="create-form">
+  <div class="container">
+    <p class="title">Create new card</p>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="enter name" [formControl]="validator.name" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Image</mat-label>
+      <input matInput placeholder="enter image url" [formControl]="validator.img" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea matInput placeholder="enter description" [formControl]="validator.description" required></textarea>
+    </mat-form-field>
+    <div class="button-row">
+      <button mat-raised-button [disabled]="!validator.name.value || !validator.img.value || !validator.description.value"
+              color="primary" (click)="onSubmit()">Create</button>
+      <button mat-raised-button [routerLink]="['/']">Cancel</button>
+    </div>
+  </div>
+</div>

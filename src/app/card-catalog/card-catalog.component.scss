@@ -1,0 +1,11 @@
+.card-catalog {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+  .container {
+    display: flex;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

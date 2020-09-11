@@ -1,0 +1,17 @@
+<div class="card-info">
+  <div class="container">
+    <div class="card-info_body">
+      <img [src]="(cardList$ | async)[idx].img" [alt]="(cardList$ | async)[idx].name">
+      <div class="body">
+        <p class="body_name">{{(cardList$ | async)[idx].name}}</p>
+        <span class="body_like">Понравилось: {{(cardList$ | async)[idx].like.count}}</span>
+        <p class="body_description">{{(cardList$ | async)[idx].description}}</p>
+      </div>
+    </div>
+    <div class="button-row">
+      <button mat-raised-button color="primary" (click)="onEdit()">Edit</button>
+      <button mat-raised-button color="warn" (click)="openDialog()">Delete</button>
+      <button mat-raised-button (click)="onBack()">Back</button>
+    </div>
+  </div>
+</div>
